@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    :focus-visible {
+        @apply outline-none ring-2 ring-rose ring-offset-2 ring-offset-cream;
+    }
+}
+
+@layer components {
+    .container-page {
+        @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+    }
+
+    .btn-primary {
+        @apply bg-brown text-white hover:bg-ink;
+    }
+
+    .btn-secondary {
+        @apply border border-brown/20 bg-white text-brown hover:border-rose hover:text-ink;
+    }
+
+    .btn-danger {
+        @apply bg-red-600 text-white hover:bg-red-700;
+    }
+
+    .btn-ghost {
+        @apply px-3 text-brown hover:bg-blush/60 hover:text-ink;
+    }
+
+    .input {
+        @apply block w-full rounded-xl border-brown/20 bg-white text-sm text-ink shadow-sm placeholder:text-brown/40 focus:border-rose focus:ring-rose disabled:bg-mist disabled:text-brown/60;
+    }
+
+    .label {
+        @apply mb-1.5 block text-sm font-medium text-brown;
+    }
+
+    .card {
+        @apply rounded-2xl bg-white shadow-soft;
+    }
+
+    .link {
+        @apply font-medium text-brown underline decoration-rose/60 underline-offset-4 transition hover:text-ink hover:decoration-rose;
+    }
+
+    /* The admin area is denser and squarer than the storefront. */
+    .admin .btn {
+        @apply rounded-lg px-4 py-2;
+    }
+
+    .admin .input {
+        @apply rounded-lg border-stone-300;
+    }
+
+    .admin .card {
+        @apply rounded-xl border border-stone-200 shadow-none;
+    }
+
+    .admin-table {
+        @apply min-w-full divide-y divide-stone-200 text-left text-sm;
+    }
+
+    .admin-table th {
+        @apply whitespace-nowrap bg-stone-50 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-stone-500;
+    }
+
+    .admin-table td {
+        @apply px-4 py-3 align-middle text-stone-700;
+    }
+
+    .admin-table tbody tr {
+        @apply border-b border-stone-100 last:border-0 hover:bg-stone-50/60;
+    }
+}
