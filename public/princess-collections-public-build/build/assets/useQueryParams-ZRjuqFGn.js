@@ -1,0 +1,1 @@
+import{G as i,r as m}from"./app-DdZOQfpP.js";function p(){const[t,s]=i(),c=m.useCallback(a=>{s(o=>{const e=new URLSearchParams(o);return"page"in a||e.delete("page"),Object.entries(a).forEach(([n,r])=>r===""||r==null?e.delete(n):e.set(n,r)),e},{replace:!0})},[s]);return[Object.fromEntries(t.entries()),c,t.toString()]}export{p as u};
